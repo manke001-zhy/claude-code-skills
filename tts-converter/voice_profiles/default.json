@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "description": "默认声音配置文件",
+  "voice_assignments": {
+    "旁白": {
+      "voice": "zh-CN-YunjianNeural",
+      "description": "成熟男声",
+      "category": "male-mature",
+      "default_speed": 1.0
+    },
+    "年轻男声": {
+      "voice": "zh-CN-YunxiNeural",
+      "description": "年轻男声",
+      "category": "male-young",
+      "default_speed": 1.0
+    },
+    "稳重男声": {
+      "voice": "zh-CN-YunzeNeural",
+      "description": "稳重男声",
+      "category": "male-mature",
+      "default_speed": 1.0
+    },
+    "中年男声": {
+      "voice": "zh-CN-YunyangNeural",
+      "description": "中年男声",
+      "category": "male-middle",
+      "default_speed": 1.0
+    },
+    "活泼女声": {
+      "voice": "zh-CN-XiaomengNeural",
+      "description": "活泼女声",
+      "category": "female-young",
+      "default_speed": 1.0
+    },
+    "温柔女声": {
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "description": "温柔女声",
+      "category": "female-young",
+      "default_speed": 1.0
+    },
+    "成熟女声": {
+      "voice": "zh-CN-XiaoyiNeural",
+      "description": "成熟女声",
+      "category": "female-mature",
+      "default_speed": 1.0
+    }
+  },
+  "speed_adjustments": {
+    "急躁": 1.2,
+    "沉稳": 0.85,
+    "活泼": 1.0,
+    "正常": 1.0
+  },
+  "backup_voices": {
+    "male-young": [
+      "zh-CN-YunxiNeural",
+      "zh-CN-YunyangNeural"
+    ],
+    "male-mature": [
+      "zh-CN-YunjianNeural",
+      "zh-CN-YunzeNeural"
+    ],
+    "male-middle": [
+      "zh-CN-YunyangNeural",
+      "zh-CN-YunzeNeural"
+    ],
+    "female-young": [
+      "zh-CN-XiaomengNeural",
+      "zh-CN-XiaoxiaoNeural"
+    ],
+    "female-mature": [
+      "zh-CN-XiaoyiNeural",
+      "zh-CN-XiaoxiaoNeural"
+    ]
+  }
+}

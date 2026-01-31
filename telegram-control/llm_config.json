@@ -1,0 +1,9 @@
+{
+  "llm_provider": "openai",
+  "openai_api_key": "sk-your-openai-api-key",
+  "openai_model": "gpt-4o",
+  "anthropic_api_key": "your-anthropic-api-key",
+  "max_tokens": 1000,
+  "temperature": 0.1,
+  "note": "使用GPT-4o进行自然语言理解。请复制此文件为 llm_config.local.json 并填入真实信息"
+}

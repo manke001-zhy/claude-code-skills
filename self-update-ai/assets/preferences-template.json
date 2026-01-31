@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "created_at": "${CREATED_AT}",
+  "updated_at": "${UPDATED_AT}",
+  "writing_style": {
+    "sentence_length": "medium",
+    "max_sentences_per_paragraph": 5,
+    "prefer_short_sentences": false,
+    "forbidden_words": [],
+    "preferred_words": []
+  },
+  "content_structure": {
+    "intro_max_sentences": 3,
+    "conclusion_first": false,
+    "use_transitions": true,
+    "bullet_points_preferred": false,
+    "use_subheadings": false
+  },
+  "tone": {
+    "formality": "neutral",
+    "verbosity": "medium"
+  },
+  "custom_rules": [],
+  "feedback_history": []
+}

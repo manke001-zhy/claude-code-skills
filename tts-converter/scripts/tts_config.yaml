@@ -1,0 +1,50 @@
+# TTS配置文件
+# 用于配置不同的TTS后端
+
+# 默认TTS后端
+# 可选值: edge, gptsovits, xunfei, hybrid
+default_backend: edge
+
+# 后端配置
+backends:
+  # Edge TTS (免费，已集成)
+  edge:
+    enabled: true
+
+  # GPT-SoVITS (需要本地部署)
+  gptsovits:
+    enabled: false  # 改为true启用
+    api_url: http://localhost:9882
+    # 声音模型映射
+    models:
+      child_male: xiaobao_model.pth
+      child_female: xiaohong_model.pth
+      elderly_male: grandpa_model.pth
+      elderly_female: grandma_model.pth
+
+  # 科大讯飞 (商业服务)
+  xunfei:
+    enabled: false
+    app_id: ""  # 填写你的APPID
+    api_key: ""  # 填写你的APIKey
+    api_secret: ""  # 填写你的Secret
+    voice_mapping:
+      child_male: xiaoyan_child
+      child_female: xiaoyan_child
+      elderly_male: xiaoyan_old
+      elderly_female: xiaoyan_old
+
+# 声音路由配置
+# 声音ID -> 后端类型
+voice_routing:
+  # 使用GPT-SoVITS的声音
+  child_male: gptsovits
+  child_female: gptsovits
+  elderly_male: gptsovits
+  elderly_female: gptsovits
+
+  # 使用讯飞的声音
+  # sichuan_male: xunfei
+  # cantonese_female: xunfei
+
+  # 其他声音使用默认后端(edge)

@@ -1,0 +1,7 @@
+{
+  "sender": "your_email@qq.com",
+  "password": "your_smtp_authorization_code",
+  "receiver": "receiver@qq.com",
+  "type": "1",
+  "note": "QQ邮箱默认配置，发送邮件时自动使用。请复制此文件为 email_config.local.json 并填入真实信息"
+}

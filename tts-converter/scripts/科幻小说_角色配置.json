@@ -1,0 +1,76 @@
+{
+  "characters": {
+    "我知": {
+      "name": "我知",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "你知": {
+      "name": "你知",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "正经地胡": {
+      "name": "正经地胡",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "不知": {
+      "name": "不知",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "艾米": {
+      "name": "艾米",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "她平静地": {
+      "name": "她平静地",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "顺便": {
+      "name": "顺便",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "把一本小": {
+      "name": "把一本小",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "我慢慢": {
+      "name": "我慢慢",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "星空不知": {
+      "name": "星空不知",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "恋爱轻小": {
+      "name": "恋爱轻小",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    },
+    "我（旁白）": {
+      "name": "我（旁白）",
+      "gender": "女",
+      "age": "年轻",
+      "voice": "zh-CN-XiaoxiaoNeural"
+    }
+  }
+}
