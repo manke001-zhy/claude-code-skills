@@ -1,8 +1,0 @@
-{
-  "bot_token": "your_telegram_bot_token",
-  "chat_id": "your_telegram_chat_id",
-  "allowed_users": ["your_chat_id"],
-  "welcome_message": "Claude Code Bot已启动！可以开始对话了。\n发送 /help 查看可用命令",
-  "default_receiver": "your_email@qq.com",
-  "note": "请复制此文件为 config.local.json 并填入真实信息"
-}
