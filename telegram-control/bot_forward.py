@@ -616,9 +616,16 @@ class ForwardBot:
         bot_token = self.config['bot_token']
 
         # 配置连接超时和重试设置
+        builder = Application.builder().token(bot_token)
+
+        # 添加代理支持（如果配置了）
+        if 'proxy' in self.config and self.config['proxy']:
+            proxy_url = self.config['proxy']
+            logger.info(f"使用代理: {proxy_url}")
+            builder = builder.proxy_url(proxy_url)
+
         application = (
-            Application.builder()
-            .token(bot_token)
+            builder
             .connect_timeout(30.0)  # 连接超时30秒
             .pool_timeout(30.0)  # 连接池超时30秒
             .read_timeout(300.0)  # 读取超时5分钟（大文件下载）
