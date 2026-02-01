@@ -1,0 +1,21 @@
+{
+  "name": "dev-browser",
+  "version": "1.0.0",
+  "description": "Browser automation for Claude Code",
+  "main": "client.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "start-extension": "node server-extension.js"
+  },
+  "keywords": ["browser", "automation", "claude-code"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "@types/node": "^20.10.0"
+  }
+}
