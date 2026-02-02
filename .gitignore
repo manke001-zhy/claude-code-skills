@@ -64,3 +64,4 @@ sessions/
 *.session.json
 .cache/
 *.cache/
+bilibili-subtitle-extractor/cookies.txt
