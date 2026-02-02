@@ -1,6 +1,6 @@
 # 格式互换技能 - 通用文档格式转换工具 v2.0
 
-支持 Markdown、Word、PDF 等多种格式的互相转换。
+> 支持 Markdown、Word、PDF 等多种格式的互相转换
 
 **✨ v2.0 新特性**：
 - ✅ **不依赖外部工具**：PDF 转换不需要 Pandoc/LibreOffice
