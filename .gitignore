@@ -56,3 +56,11 @@ Desktop.ini
 *password*.json
 *.env
 .env.local
+
+# 浏览器和会话数据（敏感信息）
+cookies.txt
+cookies*.json
+sessions/
+*.session.json
+.cache/
+*.cache/
