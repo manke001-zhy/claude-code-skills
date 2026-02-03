@@ -115,8 +115,7 @@ async function main() {
   await page.screenshot({
     path: path.join(OUTPUT_DIR, 'hot_topics_full.png'),
     fullPage: true,
-    type: 'png',
-    quality: 100 // 最高质量
+    type: 'png'
   });
   console.log('✅ 完整热搜榜已保存:', path.join(OUTPUT_DIR, 'hot_topics_full.png'));
 

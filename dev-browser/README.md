@@ -108,6 +108,48 @@ node scripts/site-specific/weibo_screenshot.cjs
 - `dev-browser/.cache/weibo-cookies.json`
 - `dev-browser/.cache/weibo-storage.json`
 
+### 5. 百家号内容管理
+
+百家号平台的登录、发布和内容管理工具：
+
+```bash
+# 登录并保存cookies（首次使用）
+cd ~/.claude/skills/dev-browser
+node scripts/site-specific/baijiahao_login.cjs
+
+# 完整发布流程（登录→编辑→发布）
+node scripts/site-specific/baijiahao_full_save.cjs
+
+# 快速保存（使用已缓存的登录状态）
+node scripts/site-specific/baijiahao_quick_save.cjs
+
+# 查看已发布内容数据
+node scripts/site-specific/baijiahao_view_data.cjs
+```
+
+**功能：**
+- 支持登录状态缓存（.cache/baijiahao-cookies.json）
+- 自动保存百家号登录状态
+- 发布内容到百家号平台
+- 查看和管理已发布内容
+
+**缓存位置：**
+- `dev-browser/.cache/baijiahao-cookies.json`
+- `dev-browser/.cache/baijiahao-storage.json`
+
+### 6. B站登录状态检查
+
+检查哔哩哔哩登录是否有效：
+
+```bash
+cd ~/.claude/skills/dev-browser
+node scripts/site-specific/bilibili_login_check.cjs
+```
+
+**功能：**
+- 检查已保存的B站会话是否有效
+- 返回登录状态和用户信息
+
 ## 📝 会话文件说明
 
 ### 会话文件位置

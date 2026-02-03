@@ -152,7 +152,113 @@ AI：✓ 已添加禁用词：首先、其次。我会避免使用这些词。
 
 完整的配置结构和字段说明，参考：[references/preference-schema.md](references/preference-schema.md)
 
-## 最佳实践
+## 安全注意事项
+
+### 敏感信息管理
+
+当用户反馈涉及"登录"、"保存状态"等功能时，需要特别注意敏感信息的保护。
+
+**详细的安全最佳实践**：[references/security-best-practices.md](references/security-best-practices.md)
+
+#### 核心原则
+
+**永远不要将敏感信息硬编码到代码中或提交到版本控制系统。**
+
+#### 敏感信息类型
+
+1. **登录凭证**：cookies、tokens、sessions
+2. **用户数据**：用户名、密码、个人信息
+3. **缓存数据**：storage state、localStorage
+4. **API 密钥**：api keys、secret keys、access tokens
+
+#### 推荐方案：.env 文件模式
+
+适用场景：需要存储 API 密钥、数据库凭证等敏感信息
+
+```
+my-skill/
+├── .env.example          # 模板文件（✅ 可提交）
+├── .env.local            # 实际配置（❌ 不可提交）
+├── .gitignore            # 包含 .env.local
+└── script.js
+```
+
+**使用方式**：
+```bash
+# 1. 复制模板
+cp .env.example .env.local
+
+# 2. 填入实际值
+vim .env.local
+
+# 3. 代码中读取
+const apiKey = process.env.API_KEY;
+```
+
+#### Cookies 缓存模式
+
+适用场景：浏览器自动化、需要保持登录状态
+
+**目录结构**：
+```
+my-skill/
+├── .cache/
+│   ├── weibo-cookies.json      # 登录 cookies
+│   └── weibo-storage.json      # localStorage
+├── .gitignore
+└── script.js
+```
+
+**必须添加到 .gitignore**：
+```
+.cache/
+*.cookies.json
+*-storage.json
+sessions/
+```
+
+#### Git 安全检查
+
+每次提交代码前，必须检查：
+
+```bash
+# 查看暂存文件
+git status
+
+# 查看暂存文件列表
+git diff --cached --name-only
+
+# 检查是否包含敏感关键词
+git diff --cached | grep -i "password\|secret\|token\|cookie\|session\|credential"
+```
+
+如果发现敏感文件：
+```bash
+# 从暂存区移除
+git reset HEAD [敏感文件路径]
+
+# 确保已在 .gitignore 中
+echo "敏感文件模式" >> .gitignore
+```
+
+#### 清理登录状态
+
+如需清除登录状态：
+```bash
+# 删除缓存目录
+rm -rf ~/.claude/skills/[skill-name]/.cache/
+
+# 或删除特定文件
+rm ~/.claude/skills/[skill-name]/.cache/*.cookies.json
+```
+
+#### 不要记录到偏好
+
+- ❌ 不要在 preferences.json 中存储密码、token
+- ❌ 不要在 custom_rules 中包含具体凭证
+- ✅ 只记录"需要支持登录缓存"这样的行为偏好
+
+### 最佳实践
 
 ### 给用户的建议
 

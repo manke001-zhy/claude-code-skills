@@ -1,0 +1,7 @@
+# Sensitive data - MUST NOT be committed
+*.local.json
+*.env
+*_config.json
+
+# Keep example configs
+!*_config.example.json

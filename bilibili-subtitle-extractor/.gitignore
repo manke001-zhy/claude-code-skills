@@ -1,13 +1,11 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Sensitive data - MUST NOT be committed
-.cache/
-*.cookies.json
-*-storage.json
-sessions/
 cookies.txt
+*.cookies.json
+sessions/
+.cache/
 
 # Temporary files
 tmp/
